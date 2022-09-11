@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor0: #B8FCF8;
+    --cor01: #19A89F;
+    --cor02: #25F5E7;
+    --cor03: #0EF5A9;
+    --cor04: #4BF565;
+    --cor05: #00E7FC;
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Inconsolata', monospace;
+    --fonte-android: 'android', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '\00A0\1f517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor01));
+    text-align: center;
+    min-height: 150px;
+    padding: 10px;
+}
+
+header h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    padding-top: 10px;
+    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.425);
+}
+
+header p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+nav {
+    background-color: var(--cor01);
+    padding: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.185);
+}
+
+nav a {
+    font-family: var(--fonte-padrao);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: var(--cor0);
+    color: var(--cor05);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.281);
+}
+
+main strong {
+    color: var(--cor01);
+    font-weight: 800;
+}
+
+main a {
+    background-color: var(--cor0);
+    color: var(--cor01);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor05);
+}
+
+main h1 {
+    color: var(--cor01);
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+main h2 {
+    background-image: linear-gradient(to right, var(--cor05), var(--cor04), transparent);
+    color: var(--cor01);
+    font-family: var(--fonte-android);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px;
+    text-indent: 15px;   
+}
+
+main p {
+    font-family: var(--fonte-padrao);
+    font-weight: 1em;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    margin: 15px 0px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+
+div.video {
+    background-image: radial-gradient(circle, var(--cor02), var(--cor03), var(--cor01));
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: 85%;
+    height: 85%;
+}
+
+aside {
+    background-color: var(--cor02);
+    border-radius: 5px;
+    padding: 10px
+}
+
+aside h3 {
+    background-color: var(--cor01);
+    font-size: 1.3em;
+    padding: 10px;
+    margin: -10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+aside ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor01);
+    font-family: var(--fonte-padrao);
+    font-size: 0.8em;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:active {
+    background-color: rgba(255, 255, 255, 0.308);
+    color: var(--cor05);
+    border-radius: 2px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor0);
+}
+
